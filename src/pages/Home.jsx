@@ -27,7 +27,7 @@ function Home() {
 
   return (
     <div className="bg-[#0B0B0B] text-white min-h-screen antialiased font-sans">
-      {/* Helmet for SEO, OG, Twitter */}
+      {/* Helmet for SEO and OG metadata */}
       <Helmet>
         <title>Hackademy Nepal | Biggest Tech Community & Learning Hub</title>
         <meta
@@ -49,7 +49,14 @@ function Home() {
           content="Hackademy Nepal is the largest tech community and market for developers in Nepal. Learn React, Python, Java, contribute to open source, and collaborate with top Nepalese tech talent."
         />
         <meta property="og:url" content="https://hackademy-discord-server.netlify.app/" />
-        <meta property="og:image" content="https://hackademy-discord-server.netlify.app/og-image.png" />
+        {/* Ensure the image path is correct and accessible */}
+        <meta
+          property="og:image"
+          content="https://hackademy-discord-server.netlify.app/og-image.png"
+        />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Hackademy Nepal Logo" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
