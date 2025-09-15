@@ -31,18 +31,18 @@ function Home() {
       {/* Helmet for strong Nepal-focused SEO */}
       <Helmet>
         {/* Title */}
-        <title>Hackademy Nepal | Biggest Tech Community & Learning Hub</title>
+        <title>Hackademy Zone | Biggest Tech Community & Learning Hub</title>
 
         {/* Meta description */}
         <meta
           name="description"
-          content="Hackademy Nepal is the largest tech community and market for developers. Learn React, Python, Java, contribute to open source, and collaborate with Nepal's top tech talent."
+          content="Hackademy Zone is the largest tech community and market for developers. Learn React, Python, Java, contribute to open source, and collaborate with Nepal's top tech talent."
         />
 
         {/* Meta keywords */}
         <meta
           name="keywords"
-          content="Hackademy Nepal, Nepal tech community, learn programming Nepal, React tutorials Nepal, Python tutorials Nepal, Java tutorials Nepal, open source Nepal, tech collaboration Nepal"
+          content="Hackademy Zone, Nepal tech community, learn programming Nepal, React tutorials Nepal, Python tutorials Nepal, Java tutorials Nepal, open source Nepal, tech collaboration Nepal"
         />
 
         {/* Robots */}
@@ -65,11 +65,11 @@ function Home() {
         <meta name="twitter:site" content="@HackademyNepal" />
         <meta
           name="twitter:title"
-          content="Hackademy Nepal | Biggest Tech Community & Learning Hub"
+          content="Hackademy Zone | Biggest Tech Community & Learning Hub"
         />
         <meta
           name="twitter:description"
-          content="Hackademy Nepal is the largest tech community and market for developers. Learn React, Python, Java, contribute to open source, and collaborate with Nepal's top tech talent."
+          content="Hackademy Zone is the largest tech community and market for developers. Learn React, Python, Java, contribute to open source, and collaborate with Nepal's top tech talent."
         />
         <meta
           name="twitter:image"
@@ -82,12 +82,12 @@ function Home() {
             {
               "@context": "https://schema.org",
               "@type": "EducationalOrganization",
-              "name": "Hackademy Nepal",
+              "name": "Hackademy Zone",
               "url": "https://hackademy-discord-server.netlify.app/",
               "logo": "https://hackademy-discord-server.netlify.app/og-image.png",
-              "description": "Hackademy Nepal is the largest tech community and market for developers. Learn React, Python, Java, contribute to open source, and collaborate with Nepal's top tech talent.",
+              "description": "Hackademy Zone is the largest tech community and market for developers. Learn React, Python, Java, contribute to open source, and collaborate with Nepal's top tech talent.",
               "sameAs": [
-                "https://twitter.com/HackademyNepal",
+                "https://twitter.com/HackademyZone",
                 "https://www.linkedin.com/company/hackademy",
                 "https://github.com/Hackademy"
               ],
