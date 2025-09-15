@@ -22,40 +22,31 @@ function Home() {
   ];
 
   const [selectedFeature, setSelectedFeature] = useState(null);
-
   const handleCardClick = (feature) => setSelectedFeature(feature);
   const handleClose = () => setSelectedFeature(null);
 
   return (
     <div className="bg-[#0B0B0B] text-white min-h-screen antialiased font-sans">
-      {/* Helmet for strong Nepal-focused SEO */}
+      {/* Helmet for SEO, OG, Twitter */}
       <Helmet>
-        {/* Title */}
-        <title>Hackademy Zone | Biggest Tech Community & Learning Hub</title>
-
-        {/* Meta description */}
+        <title>Hackademy Nepal | Biggest Tech Community & Learning Hub</title>
         <meta
           name="description"
-          content="Hackademy Zone is the largest tech community and market for developers. Learn React, Python, Java, contribute to open source, and collaborate with Nepal's top tech talent."
+          content="Hackademy Nepal is the largest tech community and market for developers in Nepal. Learn React, Python, Java, contribute to open source, and collaborate with top Nepalese tech talent."
         />
-
-        {/* Meta keywords */}
         <meta
           name="keywords"
-          content="Hackademy Zone, Nepal tech community, learn programming Nepal, React tutorials Nepal, Python tutorials Nepal, Java tutorials Nepal, open source Nepal, tech collaboration Nepal"
+          content="Hackademy Nepal, Nepal tech community, React tutorials Nepal, Python tutorials Nepal, Java tutorials Nepal, open source Nepal, tech collaboration Nepal"
         />
-
-        {/* Robots */}
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://hackademy-discord-server.netlify.app/" />
 
-        {/* Open Graph / Facebook */}
+        {/* Open Graph */}
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Hackademy Nepal" />
         <meta property="og:title" content="Hackademy Nepal | Biggest Tech Community & Learning Hub" />
         <meta
           property="og:description"
-          content="Hackademy Nepal is the largest tech community and market for developers. Learn React, Python, Java, contribute to open source, and collaborate with Nepal's top tech talent."
+          content="Hackademy Nepal is the largest tech community and market for developers in Nepal. Learn React, Python, Java, contribute to open source, and collaborate with top Nepalese tech talent."
         />
         <meta property="og:url" content="https://hackademy-discord-server.netlify.app/" />
         <meta property="og:image" content="https://hackademy-discord-server.netlify.app/og-image.png" />
@@ -65,11 +56,11 @@ function Home() {
         <meta name="twitter:site" content="@HackademyNepal" />
         <meta
           name="twitter:title"
-          content="Hackademy Zone | Biggest Tech Community & Learning Hub"
+          content="Hackademy Nepal | Biggest Tech Community & Learning Hub"
         />
         <meta
           name="twitter:description"
-          content="Hackademy Zone is the largest tech community and market for developers. Learn React, Python, Java, contribute to open source, and collaborate with Nepal's top tech talent."
+          content="Hackademy Nepal is the largest tech community and market for developers in Nepal. Learn React, Python, Java, contribute to open source, and collaborate with top Nepalese tech talent."
         />
         <meta
           name="twitter:image"
@@ -79,24 +70,24 @@ function Home() {
         {/* JSON-LD Structured Data */}
         <script type="application/ld+json">
           {`
-            {
-              "@context": "https://schema.org",
-              "@type": "EducationalOrganization",
-              "name": "Hackademy Zone",
-              "url": "https://hackademy-discord-server.netlify.app/",
-              "logo": "https://hackademy-discord-server.netlify.app/og-image.png",
-              "description": "Hackademy Zone is the largest tech community and market for developers. Learn React, Python, Java, contribute to open source, and collaborate with Nepal's top tech talent.",
-              "sameAs": [
-                "https://twitter.com/HackademyZone",
-                "https://www.linkedin.com/company/hackademy",
-                "https://github.com/Hackademy"
-              ],
-              "address": {
-                "@type": "PostalAddress",
-                "addressCountry": "Nepal"
-              }
+          {
+            "@context": "https://schema.org",
+            "@type": "EducationalOrganization",
+            "name": "Hackademy Nepal",
+            "url": "https://hackademy-discord-server.netlify.app/",
+            "logo": "https://hackademy-discord-server.netlify.app/og-image.png",
+            "description": "Hackademy Nepal is the largest tech community and market for developers in Nepal. Learn React, Python, Java, contribute to open source, and collaborate with top Nepalese tech talent.",
+            "sameAs": [
+              "https://twitter.com/HackademyNepal",
+              "https://www.linkedin.com/company/hackademy",
+              "https://github.com/Hackademy"
+            ],
+            "address": {
+              "@type": "PostalAddress",
+              "addressCountry": "Nepal"
             }
-          `}
+          }
+        `}
         </script>
       </Helmet>
 
@@ -110,14 +101,21 @@ function Home() {
         >
           Welcome to <span className="text-[#22C55E]">Hackademy Nepal</span>
         </motion.h1>
-
-        <motion.p
+        <motion.h2
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.8, ease: "easeOut" }}
-          className="mt-4 max-w-2xl text-lg md:text-xl text-gray-400"
+          className="mt-4 max-w-2xl text-xl md:text-2xl text-gray-400"
         >
-          Nepal's biggest tech community and learning hub. Learn, build, and collaborate with the top developers across Nepal.
+          Nepal's biggest tech community & learning hub for developers.
+        </motion.h2>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5, duration: 0.8, ease: "easeOut" }}
+          className="mt-2 max-w-2xl text-lg md:text-xl text-gray-400"
+        >
+          Learn, build, and collaborate with the top developers across Nepal.
         </motion.p>
       </section>
 
