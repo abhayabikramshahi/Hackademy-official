@@ -23,57 +23,77 @@ function Home() {
 
   const [selectedFeature, setSelectedFeature] = useState(null);
 
-  const handleCardClick = (feature) => {
-    setSelectedFeature(feature);
-  };
-
-  const handleClose = () => {
-    setSelectedFeature(null);
-  };
+  const handleCardClick = (feature) => setSelectedFeature(feature);
+  const handleClose = () => setSelectedFeature(null);
 
   return (
     <div className="bg-[#0B0B0B] text-white min-h-screen antialiased font-sans">
-      {/* Helmet for SEO */}
+      {/* Helmet for strong SEO */}
       <Helmet>
-        <title>Hackademy - Learn, Build & Share Tech Skills</title>
+        {/* Title */}
+        <title>Hackademy | Learn React, Python, Java & Join Tech Community</title>
+
+        {/* Meta description */}
         <meta
           name="description"
-          content="Join Hackademy, a community-driven platform to learn React, Python, Java, contribute to open source, and collaborate with developers worldwide."
+          content="Join Hackademy to learn React, Python, Java, and contribute to open-source projects. Build skills, collaborate with developers, and grow your tech career."
         />
+
+        {/* Meta keywords */}
         <meta
           name="keywords"
-          content="Hackademy, Coding, React, Python, Java, Tech Community, Open Source"
+          content="learn React online, Python tutorials, Java programming, tech community, open source projects, developer collaboration"
         />
+
+        {/* Robots */}
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://hackademy-discord-server.netlify.app/" />
 
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
-        <meta
-          property="og:title"
-          content="Hackademy - Learn, Build & Share Tech Skills"
-        />
+        <meta property="og:site_name" content="Hackademy" />
+        <meta property="og:title" content="Hackademy | Learn React, Python, Java & Join Tech Community" />
         <meta
           property="og:description"
-          content="Join Hackademy, a community-driven platform to learn React, Python, Java, contribute to open source, and collaborate with developers worldwide."
+          content="Join Hackademy to learn React, Python, Java, and contribute to open-source projects. Build skills, collaborate with developers, and grow your tech career."
         />
         <meta property="og:url" content="https://hackademy-discord-server.netlify.app/" />
         <meta property="og:image" content="https://hackademy-discord-server.netlify.app/og-image.png" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@HackademyOfficial" />
         <meta
           name="twitter:title"
-          content="Hackademy - Learn, Build & Share Tech Skills"
+          content="Hackademy | Learn React, Python, Java & Join Tech Community"
         />
         <meta
           name="twitter:description"
-          content="Join Hackademy, a community-driven platform to learn React, Python, Java, contribute to open source, and collaborate with developers worldwide."
+          content="Join Hackademy to learn React, Python, Java, and contribute to open-source projects. Build skills, collaborate with developers, and grow your tech career."
         />
         <meta
           name="twitter:image"
           content="https://hackademy-discord-server.netlify.app/og-image.png"
         />
+
+        {/* JSON-LD Structured Data */}
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "EducationalOrganization",
+              "name": "Hackademy",
+              "url": "https://hackademy-discord-server.netlify.app/",
+              "logo": "https://hackademy-discord-server.netlify.app/og-image.png",
+              "description": "Join Hackademy to learn React, Python, Java, and contribute to open-source projects. Build skills, collaborate with developers, and grow your tech career.",
+              "sameAs": [
+                "https://twitter.com/HackademyOfficial",
+                "https://www.linkedin.com/company/hackademy",
+                "https://github.com/Hackademy"
+              ]
+            }
+          `}
+        </script>
       </Helmet>
 
       {/* Hero Section */}
