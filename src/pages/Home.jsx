@@ -40,22 +40,40 @@ function Home() {
           name="description"
           content="Join Hackademy, a community-driven platform to learn React, Python, Java, contribute to open source, and collaborate with developers worldwide."
         />
-        <meta name="keywords" content="Hackademy, Coding, React, Python, Java, Tech Community, Open Source" />
+        <meta
+          name="keywords"
+          content="Hackademy, Coding, React, Python, Java, Tech Community, Open Source"
+        />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://yourwebsite.com/" />
+        <link rel="canonical" href="https://hackademy-discord-server.netlify.app/" />
 
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Hackademy - Learn, Build & Share Tech Skills" />
-        <meta property="og:description" content="Join Hackademy, a community-driven platform to learn React, Python, Java, contribute to open source, and collaborate with developers worldwide." />
-        <meta property="og:url" content="https://yourwebsite.com/" />
-        <meta property="og:image" content="https://yourwebsite.com/og-image.png" />
+        <meta
+          property="og:title"
+          content="Hackademy - Learn, Build & Share Tech Skills"
+        />
+        <meta
+          property="og:description"
+          content="Join Hackademy, a community-driven platform to learn React, Python, Java, contribute to open source, and collaborate with developers worldwide."
+        />
+        <meta property="og:url" content="https://hackademy-discord-server.netlify.app/" />
+        <meta property="og:image" content="https://hackademy-discord-server.netlify.app/og-image.png" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Hackademy - Learn, Build & Share Tech Skills" />
-        <meta name="twitter:description" content="Join Hackademy, a community-driven platform to learn React, Python, Java, contribute to open source, and collaborate with developers worldwide." />
-        <meta name="twitter:image" content="https://yourwebsite.com/og-image.png" />
+        <meta
+          name="twitter:title"
+          content="Hackademy - Learn, Build & Share Tech Skills"
+        />
+        <meta
+          name="twitter:description"
+          content="Join Hackademy, a community-driven platform to learn React, Python, Java, contribute to open source, and collaborate with developers worldwide."
+        />
+        <meta
+          name="twitter:image"
+          content="https://hackademy-discord-server.netlify.app/og-image.png"
+        />
       </Helmet>
 
       {/* Hero Section */}

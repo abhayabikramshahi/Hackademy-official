@@ -1,11 +1,55 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet";
 import Logo from "../assets/logo.png";
 
 function About() {
   return (
-    <div className="bg-rakh-kalo text-white min-h-screen antialiased font-sans px-6 py-12 flex flex-col items-center">
+    <div className="bg-[#0B0B0B] text-white min-h-screen antialiased font-sans px-6 py-12 flex flex-col items-center">
       
+      {/* SEO */}
+      <Helmet>
+        <title>About Hackademy - Learn, Build & Share Tech Skills</title>
+        <meta
+          name="description"
+          content="Hackademy is a community-driven platform for learners, developers, and tech enthusiasts. Join our courses, Discord community, and contribute to open-source projects."
+        />
+        <meta
+          name="keywords"
+          content="Hackademy, Coding, React, Python, Java, AI, Web Development, Tech Community, Open Source"
+        />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://hackademy-discord-server.netlify.app/about" />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content="About Hackademy - Learn, Build & Share Tech Skills"
+        />
+        <meta
+          property="og:description"
+          content="Hackademy is a community-driven platform for learners, developers, and tech enthusiasts. Join our courses, Discord community, and contribute to open-source projects."
+        />
+        <meta property="og:url" content="https://hackademy-discord-server.netlify.app/about" />
+        <meta property="og:image" content="https://hackademy-discord-server.netlify.app/og-image.png" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="About Hackademy - Learn, Build & Share Tech Skills"
+        />
+        <meta
+          name="twitter:description"
+          content="Hackademy is a community-driven platform for learners, developers, and tech enthusiasts. Join our courses, Discord community, and contribute to open-source projects."
+        />
+        <meta
+          name="twitter:image"
+          content="https://hackademy-discord-server.netlify.app/og-image.png"
+        />
+      </Helmet>
+
       {/* Logo */}
       <motion.img
         src={Logo}
@@ -21,7 +65,7 @@ function About() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.5, duration: 0.8, ease: "easeOut" }}
-        className="text-4xl md:text-5xl font-extrabold text-[#22C55E] mb-6 text-center"
+        className="text-4xl md:text-5xl font-extrabold text-[#22C55E] mb-8 text-center"
       >
         About Hackademy
       </motion.h1>
@@ -31,7 +75,7 @@ function About() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.8, duration: 0.8, ease: "easeOut" }}
-        className="max-w-4xl text-center space-y-6 text-lg md:text-xl"
+        className="max-w-4xl text-center space-y-6 text-lg md:text-xl leading-relaxed"
       >
         <p>
           Hackademy is a <span className="text-[#22C55E] font-semibold">community-driven platform</span> for learners, developers, and tech enthusiasts. 
@@ -57,7 +101,7 @@ function About() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.2, duration: 0.8, ease: "easeOut" }}
-        className="mt-8 text-[#22C55E] font-semibold text-lg md:text-xl text-center"
+        className="mt-12 text-[#22C55E] font-semibold text-lg md:text-xl text-center"
       >
         Created & Owned by: Abhaya Bikram Shahi
       </motion.p>
@@ -78,7 +122,7 @@ function About() {
           Join Discord
         </a>
         <a
-          href="/"
+          href="/courses"
           className="px-6 py-3 border border-[#22C55E] text-[#22C55E] font-semibold rounded-lg hover:bg-[#22C55E] hover:text-[#0F1F0E] transition"
         >
           Explore Courses
