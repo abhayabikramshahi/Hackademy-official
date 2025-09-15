@@ -12,7 +12,7 @@ function Home() {
     {
       id: 2,
       title: "👥 Community",
-      desc: "Collaborate, share ideas, and grow with like-minded learners in our official server.",
+      desc: "Collaborate, share ideas, and grow with like-minded learners in Nepal's largest tech community.",
     },
     {
       id: 3,
@@ -28,21 +28,21 @@ function Home() {
 
   return (
     <div className="bg-[#0B0B0B] text-white min-h-screen antialiased font-sans">
-      {/* Helmet for strong SEO */}
+      {/* Helmet for strong Nepal-focused SEO */}
       <Helmet>
         {/* Title */}
-        <title>Hackademy | Learn React, Python, Java & Join Tech Community</title>
+        <title>Hackademy Nepal | Biggest Tech Community & Learning Hub</title>
 
         {/* Meta description */}
         <meta
           name="description"
-          content="Join Hackademy to learn React, Python, Java, and contribute to open-source projects. Build skills, collaborate with developers, and grow your tech career."
+          content="Hackademy Nepal is the largest tech community and market for developers. Learn React, Python, Java, contribute to open source, and collaborate with Nepal's top tech talent."
         />
 
         {/* Meta keywords */}
         <meta
           name="keywords"
-          content="learn React online, Python tutorials, Java programming, tech community, open source projects, developer collaboration"
+          content="Hackademy Nepal, Nepal tech community, learn programming Nepal, React tutorials Nepal, Python tutorials Nepal, Java tutorials Nepal, open source Nepal, tech collaboration Nepal"
         />
 
         {/* Robots */}
@@ -51,25 +51,25 @@ function Home() {
 
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Hackademy" />
-        <meta property="og:title" content="Hackademy | Learn React, Python, Java & Join Tech Community" />
+        <meta property="og:site_name" content="Hackademy Nepal" />
+        <meta property="og:title" content="Hackademy Nepal | Biggest Tech Community & Learning Hub" />
         <meta
           property="og:description"
-          content="Join Hackademy to learn React, Python, Java, and contribute to open-source projects. Build skills, collaborate with developers, and grow your tech career."
+          content="Hackademy Nepal is the largest tech community and market for developers. Learn React, Python, Java, contribute to open source, and collaborate with Nepal's top tech talent."
         />
         <meta property="og:url" content="https://hackademy-discord-server.netlify.app/" />
         <meta property="og:image" content="https://hackademy-discord-server.netlify.app/og-image.png" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@HackademyOfficial" />
+        <meta name="twitter:site" content="@HackademyNepal" />
         <meta
           name="twitter:title"
-          content="Hackademy | Learn React, Python, Java & Join Tech Community"
+          content="Hackademy Nepal | Biggest Tech Community & Learning Hub"
         />
         <meta
           name="twitter:description"
-          content="Join Hackademy to learn React, Python, Java, and contribute to open-source projects. Build skills, collaborate with developers, and grow your tech career."
+          content="Hackademy Nepal is the largest tech community and market for developers. Learn React, Python, Java, contribute to open source, and collaborate with Nepal's top tech talent."
         />
         <meta
           name="twitter:image"
@@ -82,15 +82,19 @@ function Home() {
             {
               "@context": "https://schema.org",
               "@type": "EducationalOrganization",
-              "name": "Hackademy",
+              "name": "Hackademy Nepal",
               "url": "https://hackademy-discord-server.netlify.app/",
               "logo": "https://hackademy-discord-server.netlify.app/og-image.png",
-              "description": "Join Hackademy to learn React, Python, Java, and contribute to open-source projects. Build skills, collaborate with developers, and grow your tech career.",
+              "description": "Hackademy Nepal is the largest tech community and market for developers. Learn React, Python, Java, contribute to open source, and collaborate with Nepal's top tech talent.",
               "sameAs": [
-                "https://twitter.com/HackademyOfficial",
+                "https://twitter.com/HackademyNepal",
                 "https://www.linkedin.com/company/hackademy",
                 "https://github.com/Hackademy"
-              ]
+              ],
+              "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "Nepal"
+              }
             }
           `}
         </script>
@@ -104,7 +108,7 @@ function Home() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="text-4xl md:text-6xl font-extrabold tracking-tight"
         >
-          Welcome to <span className="text-[#22C55E]">Hackademy</span>
+          Welcome to <span className="text-[#22C55E]">Hackademy Nepal</span>
         </motion.h1>
 
         <motion.p
@@ -113,8 +117,7 @@ function Home() {
           transition={{ delay: 0.3, duration: 0.8, ease: "easeOut" }}
           className="mt-4 max-w-2xl text-lg md:text-xl text-gray-400"
         >
-          A community-driven platform for learning, building, and sharing tech knowledge.  
-          Click on any feature to learn more.
+          Nepal's biggest tech community and learning hub. Learn, build, and collaborate with the top developers across Nepal.
         </motion.p>
       </section>
 
