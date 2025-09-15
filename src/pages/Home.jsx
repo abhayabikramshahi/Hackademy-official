@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
+import { Helmet } from "react-helmet";
 
 function Home() {
   const features = [
@@ -33,6 +33,31 @@ function Home() {
 
   return (
     <div className="bg-[#0B0B0B] text-white min-h-screen antialiased font-sans">
+      {/* Helmet for SEO */}
+      <Helmet>
+        <title>Hackademy - Learn, Build & Share Tech Skills</title>
+        <meta
+          name="description"
+          content="Join Hackademy, a community-driven platform to learn React, Python, Java, contribute to open source, and collaborate with developers worldwide."
+        />
+        <meta name="keywords" content="Hackademy, Coding, React, Python, Java, Tech Community, Open Source" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://yourwebsite.com/" />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Hackademy - Learn, Build & Share Tech Skills" />
+        <meta property="og:description" content="Join Hackademy, a community-driven platform to learn React, Python, Java, contribute to open source, and collaborate with developers worldwide." />
+        <meta property="og:url" content="https://yourwebsite.com/" />
+        <meta property="og:image" content="https://yourwebsite.com/og-image.png" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Hackademy - Learn, Build & Share Tech Skills" />
+        <meta name="twitter:description" content="Join Hackademy, a community-driven platform to learn React, Python, Java, contribute to open source, and collaborate with developers worldwide." />
+        <meta name="twitter:image" content="https://yourwebsite.com/og-image.png" />
+      </Helmet>
+
       {/* Hero Section */}
       <section className="flex flex-col items-center justify-center text-center py-24 px-6">
         <motion.h1
