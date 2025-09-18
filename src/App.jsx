@@ -6,6 +6,7 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import PageNotFound from './pages/PageNotFound'
 import Community from './pages/Community'
+import Staffs from './pages/Staffs'
 import './App.css'
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Route path="/about" element={<About />} />
            <Route path="/community" element={<Community />} />
                 <Route path="*" element={<PageNotFound />} />
+                  <Route path="/staffs" element={<Staffs />} />
       </Routes>
 
       <Footer />
