@@ -1,7 +1,13 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 function About() {
+  const [active, setActive] = useState(null);
+
+  const toggleSection = (section) => {
+    setActive(active === section ? null : section);
+  };
+
   return (
     <div className="min-h-screen bg-black text-white flex flex-col items-center justify-center px-6 py-12">
       {/* Header */}
@@ -11,7 +17,7 @@ function About() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        About HackAcademy Zone
+        About Hackademy Zone
       </motion.h1>
 
       {/* Content Section */}
@@ -22,72 +28,84 @@ function About() {
         transition={{ delay: 0.5, duration: 1 }}
       >
         <p className="text-lg md:text-xl mb-4">
-          Welcome to <span className="text-blue-400 font-semibold">HackAcademy Zone</span>, 
-          the ultimate place where coding meets creativity. 🚀
+          👾 <span className="text-blue-400 font-semibold">Welcome to Hackademy Zone</span> — 
+          where coders, hackers, and chillers unite. 🚀
         </p>
         <p className="text-gray-300 mb-4">
-          We empower students, developers, and creators to sharpen their coding skills, 
-          explore real-world projects, and build a strong tech career. 
-          Whether you’re a beginner or an advanced coder, HackAcademy Zone is your hub for growth.
+          💻 Whether you’re grinding LeetCode, breaking into CTF challenges, or just vibing with memes, 
+          this is the spot. HackAcademy isn’t just about learning — it’s about creating, breaking, fixing, 
+          and growing together.
         </p>
         <p className="text-gray-300 mb-4">
-          Our mission is simple: <span className="text-blue-400 font-semibold">
-          Learn, Code, and Conquer</span>. With structured tutorials, project-based learning, 
-          and a supportive community, you’ll always stay one step ahead in the tech game.
+          ⚡ We help <span className="text-blue-400 font-semibold">students, devs, and creators</span> 
+          sharpen their skills with real projects, collab with like-minded people, and build a career that 
+          actually matters. From <span className="text-blue-400 font-semibold">beginner coders</span> 
+          to <span className="text-blue-400 font-semibold">hardcore hackers</span>, there’s a space for you here.
+        </p>
+        <p className="text-gray-300 mb-4">
+          🎯 Our mission is simple: <span className="text-blue-400 font-semibold">
+          Learn. Hack. Chill. Conquer.</span> With tutorials, projects, late-night coding jams, 
+          and a community that always has your back, you’ll stay one step ahead in the tech game — 
+          while having fun on the side.
         </p>
       </motion.div>
 
-      {/* Features Section */}
+      {/* Server Areas */}
       <motion.div
-        className="grid md:grid-cols-3 gap-6 mt-10 max-w-5xl w-full"
-        initial="hidden"
-        animate="visible"
-        variants={{
-          hidden: { opacity: 0 },
-          visible: {
-            opacity: 1,
-            transition: { staggerChildren: 0.3 },
-          },
-        }}
+        className="mt-16 max-w-4xl w-full text-center"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1, duration: 1 }}
       >
-        {/* Feature Card 1 */}
-        <motion.div
-          className="bg-gray-900 rounded-2xl shadow-lg p-6 hover:shadow-blue-500 transition transform hover:scale-105"
-          variants={{
-            hidden: { opacity: 0, y: 50 },
-            visible: { opacity: 1, y: 0 },
-          }}
-          transition={{ duration: 0.6 }}
-        >
-          <h2 className="text-xl font-semibold text-blue-400 mb-2">🚀 Practical Learning</h2>
-          <p className="text-gray-400">Hands-on coding with real-world projects to boost your skills.</p>
-        </motion.div>
+        <h2 className="text-3xl font-bold text-blue-400 mb-6">🌐 Server Spaces</h2>
 
-        {/* Feature Card 2 */}
-        <motion.div
-          className="bg-gray-900 rounded-2xl shadow-lg p-6 hover:shadow-blue-500 transition transform hover:scale-105"
-          variants={{
-            hidden: { opacity: 0, y: 50 },
-            visible: { opacity: 1, y: 0 },
-          }}
-          transition={{ duration: 0.6 }}
-        >
-          <h2 className="text-xl font-semibold text-blue-400 mb-2">👩‍💻 Community</h2>
-          <p className="text-gray-400">Join like-minded learners and collaborate on exciting challenges.</p>
-        </motion.div>
+        <div className="grid md:grid-cols-2 gap-8">
+          {/* Tech Area */}
+          <div
+            onClick={() => toggleSection("tech")}
+            className="cursor-pointer bg-gray-900 rounded-2xl shadow-lg p-8 hover:shadow-blue-500 transition transform hover:scale-105"
+          >
+            <h3 className="text-2xl font-semibold text-blue-300 mb-2">💻 Tech Area</h3>
+            <AnimatePresence>
+              {active === "tech" && (
+                <motion.p
+                  key="tech"
+                  className="text-gray-400 mt-3"
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: "auto" }}
+                  exit={{ opacity: 0, height: 0 }}
+                  transition={{ duration: 0.4 }}
+                >
+                  Dive into coding discussions, share projects, get help with bugs, 
+                  and collaborate on open-source. This is where innovation happens.
+                </motion.p>
+              )}
+            </AnimatePresence>
+          </div>
 
-        {/* Feature Card 3 */}
-        <motion.div
-          className="bg-gray-900 rounded-2xl shadow-lg p-6 hover:shadow-blue-500 transition transform hover:scale-105"
-          variants={{
-            hidden: { opacity: 0, y: 50 },
-            visible: { opacity: 1, y: 0 },
-          }}
-          transition={{ duration: 0.6 }}
-        >
-          <h2 className="text-xl font-semibold text-blue-400 mb-2">🎯 Career Ready</h2>
-          <p className="text-gray-400">Master skills that make you job-ready and future-proof.</p>
-        </motion.div>
+          {/* Chill Area */}
+          <div
+            onClick={() => toggleSection("chill")}
+            className="cursor-pointer bg-gray-900 rounded-2xl shadow-lg p-8 hover:shadow-purple-500 transition transform hover:scale-105"
+          >
+            <h3 className="text-2xl font-semibold text-purple-300 mb-2">🎉 Chill Area</h3>
+            <AnimatePresence>
+              {active === "chill" && (
+                <motion.p
+                  key="chill"
+                  className="text-gray-400 mt-3"
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: "auto" }}
+                  exit={{ opacity: 0, height: 0 }}
+                  transition={{ duration: 0.4 }}
+                >
+                  Hang out with fellow members, share memes, talk about life, or 
+                  just vibe together. Because community isn’t only about work—it’s about fun too.
+                </motion.p>
+              )}
+            </AnimatePresence>
+          </div>
+        </div>
       </motion.div>
     </div>
   );
