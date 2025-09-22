@@ -1,13 +1,11 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import Logo from '../assets/logo.png'
+import Logo from "../assets/logo.png";
 
 const navItems = [
   { name: "Home", path: "/" },
   { name: "About", path: "/about" },
-  {name: "Staffs", path: "/staffs"},
-  { name: "Community", path: "/community" },
+  { name: "Staffs", path: "/staffs" },
 ];
 
 function Navbar() {
@@ -17,27 +15,31 @@ function Navbar() {
     <nav className="bg-black text-white shadow-md">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-2">
-  <img 
-    src={Logo} 
-    className="h-12 w-auto" // height 48px, width auto
-    alt="Hackademy Logo" 
-  />
-  <span className="text-2xl font-bold tracking-wide">Hackademy Zone</span>
-</Link>
+        <button
+          onClick={() => (window.location.href = "/")}
+          className="flex items-center gap-2"
+        >
+          <img
+            src={Logo}
+            className="h-12 w-auto"
+            alt="Hackademy Logo"
+          />
+          <span className="text-2xl font-bold tracking-wide">
+            Hackademy Zone
+          </span>
+        </button>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex gap-8 items-center">
           {navItems.map((item) => (
-            <Link
+            <button
               key={item.name}
-              to={item.path}
+              onClick={() => (window.location.href = item.path)}
               className="hover:text-red-500 transition font-medium"
             >
               {item.name}
-            </Link>
+            </button>
           ))}
-
         </div>
 
         {/* Mobile Menu Button */}
@@ -53,14 +55,16 @@ function Navbar() {
       {isOpen && (
         <div className="md:hidden bg-black border-t border-gray-800 px-6 py-4 flex flex-col gap-4">
           {navItems.map((item) => (
-            <Link
+            <button
               key={item.name}
-              to={item.path}
-              onClick={() => setIsOpen(false)}
-              className="hover:text-red-500 transition font-medium"
+              onClick={() => {
+                setIsOpen(false);
+                window.location.href = item.path;
+              }}
+              className="hover:text-red-500 transition font-medium text-left"
             >
               {item.name}
-            </Link>
+            </button>
           ))}
         </div>
       )}
