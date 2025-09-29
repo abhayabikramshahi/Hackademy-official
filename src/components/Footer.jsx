@@ -1,40 +1,85 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { Facebook, Twitter, Linkedin, Github } from "lucide-react";
 
 function Footer() {
   return (
-    <footer className="w-full bg-gradient-to-r from-black via-gray-900 to-black text-white py-6 relative overflow-hidden">
-      {/* Floating blobs */}
-      <motion.div
-        className="absolute -top-10 -left-10 w-40 h-40 bg-purple-600 rounded-full mix-blend-multiply filter blur-2xl opacity-30"
-        animate={{ x: [0, 20, -20, 0], y: [0, -20, 20, 0] }}
-        transition={{ repeat: Infinity, duration: 10, ease: "easeInOut" }}
-      />
-      <motion.div
-        className="absolute -bottom-10 -right-10 w-40 h-40 bg-pink-500 rounded-full mix-blend-multiply filter blur-2xl opacity-30"
-        animate={{ x: [0, -15, 15, 0], y: [0, 15, -15, 0] }}
-        transition={{ repeat: Infinity, duration: 12, ease: "easeInOut" }}
-      />
+    <footer className="bg-gradient-to-r from-white via-gray-50 to-white text-gray-700 py-10 px-6 shadow-inner">
+      <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-10 border-b border-gray-200 pb-8">
+        {/* Logo & About */}
+        <div>
+          <h2 className="text-2xl font-bold text-gray-900">Hackademy Zone</h2>
+          <p className="mt-3 text-sm text-gray-600 leading-relaxed">
+            Hackademy Zone is your hub for coding, ethical hacking, and
+            tech-driven learning. Build, break, and innovate with us.
+          </p>
+        </div>
 
-      <div className="relative z-10 text-center px-4">
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          className="text-sm md:text-base"
-        >
-          &copy; {new Date().getFullYear()} All rights reserved{" "}
-          <span className="font-bold bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">
-            Hackademy Zone
-          </span>
-        </motion.p>
-        <motion.div
-          whileHover={{ scale: 1.2, rotate: 5 }}
-          transition={{ type: "spring", stiffness: 200 }}
-          className="mt-3 inline-block cursor-pointer"
-        >
-          🚀 Stay Crazy, Keep Hacking!
-        </motion.div>
+        {/* Quick Links */}
+        <div>
+          <h3 className="text-lg font-semibold text-gray-900 mb-4">
+            Quick Links
+          </h3>
+          <ul className="space-y-2 text-sm">
+            <li>
+              <a href="/" className="hover:text-black">
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="/about" className="hover:text-black">
+                About Us
+              </a>
+            </li>
+            <li>
+              <a href="/courses" className="hover:text-black">
+                Courses
+              </a>
+            </li>
+            <li>
+              <a href="/contact" className="hover:text-black">
+                Contact
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        {/* Social Links */}
+        <div>
+          <h3 className="text-lg font-semibold text-gray-900 mb-4">
+            Connect With Us
+          </h3>
+          <div className="flex space-x-4">
+            <a
+              href="#"
+              className="p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition"
+            >
+              <Facebook size={18} />
+            </a>
+            <a
+              href="#"
+              className="p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition"
+            >
+              <Twitter size={18} />
+            </a>
+            <a
+              href="#"
+              className="p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition"
+            >
+              <Linkedin size={18} />
+            </a>
+            <a
+              href="#"
+              className="p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition"
+            >
+              <Github size={18} />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom Bar */}
+      <div className="mt-6 text-center text-sm text-gray-500">
+        © {new Date().getFullYear()} Hackademy Zone. All rights reserved.
       </div>
     </footer>
   );
