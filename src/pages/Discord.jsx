@@ -1,17 +1,6 @@
 import React, { useEffect, useState } from "react";
 
 function Discord() {
-  // Bot IDs to filter out
-  const botIds = [
-    "437808476106784770",
-    "962773074070077470",
-    "302050872383242240",
-    "500658624109084682",
-    "944016826751389717",
-    "651095740390834176",
-    "1088851993242634064",
-  ];
-
   // Fallback server data
   const SERVER = {
     name: "Hackademy Discord",
@@ -38,9 +27,20 @@ function Discord() {
       .catch((err) => console.error("Error fetching Discord data:", err));
   }, []);
 
-  // Filter out members whose ID is in botIds
-  const displayedMembers =
-    serverData.members?.filter((member) => !botIds.includes(member.id)) || [];
+  const excludedUsernames = [
+    "Arcane",
+    "Dinero",
+    "DISBOARD",
+    "Dyno",
+    "Emoji.gg",
+    "Lara✨",
+    "hackademy zone official",
+    "Security",
+  ];
+
+  const displayedMembers = (serverData.members || []).filter(
+    (member) => !excludedUsernames.includes(member.username)
+  );
 
   return (
     <main className="p-6 bg-gray-50 min-h-screen">
