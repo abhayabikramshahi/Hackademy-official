@@ -6,8 +6,8 @@ import { path } from "framer-motion/client";
 
 const navItems = [
   { name: "Home", path: "/" },
-  // { name: "About", path: "/about" },
-  // {name: "Discord", path: "/discord"}
+  { name: "Discord", path: "/discord" },
+  // { name: "About", path: "/about" }
 ];
 
 function Navbar() {

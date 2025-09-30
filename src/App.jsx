@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
-import Invest from './pages/Invest';
 import PageNotFound from './pages/PageNotFound';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -25,7 +24,6 @@ function AppContent() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/invest" element={<Invest />} />
           <Route path="*" element={<PageNotFound />} />
             <Route path="/discord" element={<Discord />} />
             <Route path="/join" element={<Join />} />
